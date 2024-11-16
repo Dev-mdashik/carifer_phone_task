@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --base-color : #060071;
+    --field-color : #171719;
+    --nav-color : #ffffffd1;
+}
+
+body {
+    font-family: "Nunito", sans-serif !important;
+    letter-spacing: 0.3px;
+    background: #cfcfcf;
+    margin: 0;
+    padding: 0;
+}
+
+.Auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.Auth h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.Auth .card {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    box-shadow: 3px 7px 17px #ddd;
+}
+
+.Auth .card .img-box {
+    width: 70%;
+    position: relative;
+}
+.Auth .card .img-box h3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    z-index: 9;
+    margin: 0;
+    padding-bottom: 30px;
+    height: 100%;
+    width: 100%;
+}
+.Auth .card .img-box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bbaaaa;
+    z-index: 9;
+    padding-top: 30px;
+    height: 100%;
+    width: 100%;
+}
+.Auth .card .img-box::after {
+    content: 'hello';
+    background: #00000070;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Auth .card .img-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.Auth .card form {
+    width: 30%;
+    padding: 15px 20px;
+    display: flex;
+}
+.Auth .card main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Auth .form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.Auth .form-control input {
+    border: none;
+    border-bottom: 2px solid var(--field-color);
+    font-size: 14px;
+}
+.Auth .form-control label {
+    color: #858282;
+    font-weight: 600;
+    font-size: 13px;
+}
+.Auth .form-control input:focus-visible{
+    outline: none!important;
+    border-bottom: 2px solid var(--field-color);
+}
+.form-control p.error {
+    font-size: 12px;
+    margin: 6px 0 0 0;
+}
+.Auth form a {
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    color: #959595;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.Auth form button {
+    margin-top: 25px;
+    padding: 10px;
+    border: none;
+    background: black;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.Auth form button:hover {
+   box-shadow: 3px 4px 10px #b2b2b2
+}
+
+
+
+/* STATUS MESSAGES */
+.status {
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    z-index: 9;
+}
+.status p.success {
+    color: #fff;
+    background: #00da00;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 5px;
+    box-shadow: 1px 2px 15px #5656564f;
+}
+.status p.error {
+    color: #fff;
+    background: #ff0000;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 5px;
+    box-shadow: 1px 2px 15px #5656564f;
+}
+
+
+/* #################################################################################### */
+
+.app nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background: var(--base-color);
+    height: 8rem;
+    padding: 30px 30px 10px 30px;
+    color: #fff;
+    box-shadow: 1px 5px 20px #2b2b2b12;
+}
+.app nav .wrapper{
+    display: flex;
+    align-items: center;
+}
+.app nav .wrapper .brand{
+    font-size: 22px;
+    font-weight: 800;
+}
+.app nav .logout{
+    padding: 12px;
+    border: none;
+    background: var(--field-color);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 16px;
+    font-weight: 600;
+}
+.app nav .logout:hover{
+    box-shadow: 3px 4px 10px #3a3a3a7a;
+}
+
+.app nav  form {
+    display: flex;
+    align-items: center;
+}
+.app nav .user h5{
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 17px;
+}
+.app nav .user h6{
+    margin: 0;
+    color: var(--nav-color);
+    text-transform: capitalize;
+}
+.app nav .user{
+    margin-right: 10px;
+}
+.app nav .wrapper ul{
+    display: flex;
+    align-items: center;
+}
+.app nav .wrapper ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+.app nav .wrapper ul li a{
+    list-style: none;
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--nav-color);
+    cursor: pointer;
+}
+
+.phone-connection {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -40px;
+    width: 100%;
+}
+.phone-connection .card {
+    background: #fff;
+    width: 80%;
+    box-shadow: 1px 5px 20px #2b2b2b12;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.phone-connection .card-header {
+    display: flex;
+    justify-content: space-between;
+}
+.phone-connection .card-header .title {
+    font-size: 18px;
+    font-weight: 800;
+}
+.phone-connection .card-header .back-route a{
+    background: var(--base-color);
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 5px 20px #2b2b2b30;
+}
+.phone-connection .card-body{
+    border-top: 1px solid #ddd;
+    margin: 25px 0 0 0;
+    padding: 25px 0 0 0;
+}
+.phone-connection .card-body .datatable{
+    overflow: auto;
+    max-height: 350px;
+}
+.phone-connection .card-body .datatable .actions{
+    display: flex;
+    align-items: center;
+}
+.phone-connection .card-body  table{
+   width: 100%;
+}
+.phone-connection .card-body  table td{
+   padding: 10px;
+}
+.phone-connection .card-body  table td.approved{
+   color: #00ff37;
+   text-transform: capitalize;
+}
+/* .phone-connection .card-body  table td.approved i{
+    background: green;
+    border-radius: 100px;
+    height: 5px;
+    width: 5px;
+    margin-right: 15px;
+} */
+.phone-connection .card-body  table td.rejected{
+   color: #ff0000;
+   text-transform: capitalize;
+}
+/* .phone-connection .card-body  table td.rejected i{
+    background: #ff0000;
+    border-radius: 100px;
+    height: 5px;
+    width: 5px;
+    margin-right: 15px;
+} */
+.phone-connection .card-body  table td.pending{
+   color: black;
+}
+.phone-connection .card-body  .nodata{
+   text-align: center;
+}
+.phone-connection .card-body  .actions button.edit{
+    background: var(--field-color);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 1px 5px 20px #2b2b2b30;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    margin: 0 3px;
+}
+.phone-connection .card-body  .actions button.delete{
+   width: 40px;
+   margin: 0 3px;
+}
+.phone-connection .card-body .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.phone-connection .card-body .wrapper .box{
+    width: 50%;
+}
+.phone-connection .card-body .wrapper .box-1{
+    padding-right: 20px;
+}
+.phone-connection .card-body .wrapper .box-2{
+    padding-left: 20px;
+}
+.phone-connection .card-body .wrapper .form-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.phone-connection .card-body .form-control label{
+    color: #858282;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.phone-connection .card-body .form-control input{
+    border: none;
+    border-bottom: 2px solid var(--base-color);
+    font-size: 14px;
+}
+.phone-connection .card-body .form-control textarea{
+    border: none;
+    border-bottom: 2px solid var(--base-color);
+    font-size: 14px;
+}
+.phone-connection .card-body .form-control p{
+    margin: 5px 0 0 0;
+    font-size: 13px;
+    color: red;
+}
+.phone-connection .card-body .form-control textarea:focus-visible{
+    outline: none!important;
+    border-bottom: 2px solid var(--field-color);
+}
+.phone-connection .card-body .form-control input:focus-visible{
+    outline: none!important;
+    border-bottom: 2px solid var(--field-color);
+}
+.phone-connection .card-body form .save-btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.phone-connection.admin .card-body form button {
+    width: 80px!important;
+}
+.phone-connection .card-body form button{
+    background: var(--field-color);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 1px 5px 20px #2b2b2b30;;
+    border: none;
+    cursor: pointer;
+}
