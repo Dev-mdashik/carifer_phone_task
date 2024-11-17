@@ -64,3 +64,60 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+## Following Steps:
+- **[Step](1)**
+Run the following commands to migrate the database and start the development server:
+⦁   composer install 
+⦁   cp .env.example .env 
+⦁   php artisan key:generate 
+⦁	php artisan migrate
+⦁	php artisan db:seed
+⦁	php artisan serve
+<!-- if you want to run another port, run below a command -->
+⦁	php artisan serve --port=8001
+
+ 
+
+## Completed Requierement:
+⦁	I have completed the task based on the given requirements.
+⦁	I implemented my own creative ideas, custom design, and unique CSS.
+⦁	To know more details, kindly run this application.
+
+- **[Database Setup](1)**
+⦁	I've used MySQL database for this application.
+⦁	I've used the seeder file to seed the dummy datas.
+
+- **[Customer Views](2)**
+⦁	Customer can do self-registeration with email address.
+⦁	If you made a mistake while creating or updating a phone connection. The Form validation will be worked.
+⦁	Listed the applied connections in customer home page based on the user.
+⦁	Customer can't go to admin views if the user is in the customer role.
+
+
+- **[Admin Views](3)**
+⦁	Admin can't do self-registeration with email address. Admin can only be registered with seeder.
+⦁	Listed the all applied connections in Admin home page.
+⦁	Admin can approve phone connections and even admin can reject the phone connections.
+⦁	Admin can't go to customer views if the user is in the admin role.
+
+
+- **[Authentication and Authorization](4)**
+⦁	I've used middleware file.
+⦁	I've allowed only authenticated users to perform CRUD operations and access the url.
+⦁	Customer can't go to admin views if the user is in the customer role.
+⦁	Admin can't go to customer views if the user is in the admin role.
+⦁	If they want to access the url. they will be redirected to login page.
+
+
+- **[Bonus](5)**
+⦁	I've worked in oops concept. because I know the little bit oops concept. You can check it in PhoneConnController.php file
+⦁	I've implemented classic UI design in login, customer phone creation, admin home page etc.., you can see it in all pages.
+⦁	I've used the components files and layouts files for scalabe code.
+⦁	Implemented clean, maintable, scalable and efficient code in this application.
+
+
+I hope I did my best with this task! :)
